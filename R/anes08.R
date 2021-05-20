@@ -1,0 +1,44 @@
+#' 11 Variables from the 2008 American National Election Study
+#'
+#' The survey dataset includes 11 variables from the 
+#' 2008 edition of the American National Election Study. 
+#'
+#' @format A data frame with 2265 rows and 11 variables:
+#' \describe{
+#'  \item{age}{Age of the respondent}
+#'  \item{female}{Sex of the respondent}
+#'  \item{white}{Non-white vs. white}
+#'  \item{education}{No high school, 
+#'   some high school, high school diploma, college}
+#'  \item{income}{Low, medium, high.}
+#'  \item{religion}{Protestant, Catholic/Orthodox, Atheist/other}
+#'  \item{married}{Single, married, no longer married}
+#'  \item{jobs_r}{7 response categories ranging from 
+#'  "Govt should let each person get ahead on own" (1) 
+#'  to "Govt should see to jobs and standard of living" (7)}
+#' \item{imp_enviro}{Whether the respondent sees the environment 
+#'  as an important issue (important/not important)}
+#' \item{vote}{ Vote choice in the 2008 presidential 
+#'  election: Obama, McCain, No vote/Other}
+#' \item{time}{Time for the respondent to complete the survey}
+#' }
+#' 
+#' @details 
+#' The dataset \code{anes} was prepared by Kropko et al. (2014). The nine 
+#' variables contain different levels of missingness. 
+#' 
+#' The dataset was imputed using random value imputation and predictive 
+#' mean matching via [mice::mice()] (Version: 3.13.0, seed=42).
+#' 
+#' The imputed datasets are available in \code{anes_rng} (random value
+#' imputation) and \code{anes_pmm} (predictive mean matching).
+#' 
+#' @aliases anes08_rng anes08_pmm
+#' 
+#' @references
+#' J. Kropko, B. Goodrich, A. Gelman, and J. Hill. 2014. Multiple Imputation 
+#' for Continuous and Categorical Data: Comparing Joint Multivariate Normal 
+#' and Conditional Approaches, Political Analysis 22(4):497–519.
+#' 
+#' @source \url{https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/24672}
+"anes08"
