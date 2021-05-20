@@ -92,8 +92,9 @@ covariate category (for categorical variables).
 }
 \description{
 Function to compute discrepancy statistics comparing the (reweighted)
-density of imputed and observed values. To compute the weights, the
-function relies on either Hainmueller's entropy weights or Zubizarreta's
+density of imputed and observed values. To compute the weights balancing
+covariates that are part of the missing data mechanism, the function
+relies on either Hainmueller's entropy weights or Zubizarreta's
 stable weights.
 }
 \details{

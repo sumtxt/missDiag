@@ -1,3 +1,4 @@
 ^install\.R$
 archive
 ^data-raw$
+^README.Rmd

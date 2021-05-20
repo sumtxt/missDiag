@@ -12,8 +12,6 @@ knitr::opts_chunk$set(
 library(knitr)
 ```
 
-# missDiag
-
 Incomplete data is a common challenge when analyzing real-world data. Another challenge is choosing from many available multiple imputation approaches to fill-in the missing values. Marbach (2021) suggests adopting the imputation approach that generates a density of imputed values most similar to those of the observed values for an incomplete variable after balancing all other covariates. The package facilitates the computation of discrepancy statistics summarizing differences between the density of imputed and observed values and the construction of weights to balance covariates.  
 
 

@@ -1,9 +1,9 @@
 Package: missDiag
-Title: Adjusted comparision of imputed and observed values 
-Version: 0.0.1
+Title: Comparing Observed and Imputed Values under MAR and MCAR
+Version: 1.0.0
 Author: Moritz Marbach <moritz.marbach@tamu.edu> [aut, cre]
 Maintainer: Moritz Marbach <moritz.marbach@tamu.edu>
-Description: Adjusted comparision of imputed and observed values.
+Description: The package facilitates the computation of discrepancy statistics summarizing differences between the density of imputed and observed values and the construction of weights to balance covariates that are part of the missing data mechanism. This package implements the method described in Marbach (2021). 
 License: GPL-3
 URL: https://github.com/sumtxt/missDiag/
 BugReports: https://github.com/sumtxt/missDiag/issues

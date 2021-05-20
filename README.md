@@ -1,6 +1,4 @@
 
-# missDiag
-
 Incomplete data is a common challenge when analyzing real-world data.
 Another challenge is choosing from many available multiple imputation
 approaches to fill-in the missing values. Marbach (2021) suggests
