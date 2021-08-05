@@ -69,7 +69,7 @@ that there will be K rows for each imputed dataset in the
 output. The label for each category is listed in \code{vname}.
 
 If the default settings are adopted, the dataset includes
-the following discrepancy statistics for continious variables:
+the following discrepancy statistics for continuous variables:
 
 \itemize{
 \item \code{diff_adj}: Standardized mean difference
@@ -86,23 +86,22 @@ the balance statistics for all K covariates.
 These balance statistics are useful to diagnose if the fitted
 weights are successful in balancing the covariate distribution.
 
-For these diagnostical results the column \code{vname} lists
-the covariate name (for continious variables) or the
+For these diagnostics the column \code{vname} lists
+the covariate name (for continuous variables) or the
 covariate category (for categorical variables).
 }
 \description{
 Function to compute discrepancy statistics comparing the (reweighted)
 density of imputed and observed values. To compute the weights balancing
 covariates that are part of the missing data mechanism, the function
-relies on either Hainmueller's entropy weights or Zubizarreta's
-stable weights.
+relies on either entropy balancing or stable balancing weights.
 }
 \details{
 Let y be a variable with observed and imputed values and let m be
 a corresponding indicator if a value in y is observed (0) or imputed (1).
 We use X to denote all K covariates and x_k as the k^th covariate.
 
-By default, \code{missDiag} computes discrepancy statistics (or balance
+By default, \code{missDiag} computes discrepancy statistics (balance
 statistics) comparing the distribution of observed and imputed values,
 ie. comparing f(y|m=1) vs. f(y|m=0). The distribution are expected
 to be equal under MCAR.
@@ -131,7 +130,7 @@ If \code{use_imputed_cov=FALSE}, all imputed values in the covariates X
 are deleted, variables are coerced to factor variables with missing
 values encoded as one category. Numerical variables are binned by quantiles
 before coercion. Use the parameter \code{categories} to define the
-number of bins. By default only variales of class "numeric" are binned.
+number of bins. By default only variables of class "numeric" are binned.
 Use \code{convert = c("numeric", "integer")} to also bin integer
 variables before coercion to factor variables.
 

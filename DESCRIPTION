@@ -1,9 +1,9 @@
 Package: missDiag
 Title: Comparing Observed and Imputed Values under MAR and MCAR
-Version: 1.0.0
+Version: 1.0.1
 Author: Moritz Marbach <moritz.marbach@tamu.edu> [aut, cre]
 Maintainer: Moritz Marbach <moritz.marbach@tamu.edu>
-Description: The package facilitates the computation of discrepancy statistics summarizing differences between the density of imputed and observed values and the construction of weights to balance covariates that are part of the missing data mechanism. This package implements the method described in Marbach (2021). 
+Description: The package facilitates the computation of discrepancy statistics summarizing differences between the density of imputed and observed values and the construction of weights to balance covariates that are part of the missing data mechanism. This package implements the method described in Marbach (2021) <arXiv:2107.05427>. 
 License: GPL-3
 URL: https://github.com/sumtxt/missDiag/
 BugReports: https://github.com/sumtxt/missDiag/issues
@@ -15,8 +15,8 @@ Imports:
     Formula (>= 1.2-3),
     cobalt (>= 4.1.0)
 Suggests: 
-    mice (>= 3.11.0),
-    sbw (>= 1.1.1), 
+    mice (>= 3.13.0),
+    sbw (>= 1.1.3), 
     ebal (>= 0.1-6)
 Depends: 
     R (>= 2.10)
