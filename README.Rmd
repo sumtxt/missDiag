@@ -28,20 +28,12 @@ To install the `remotes` package use `install.packages("remotes")`.
 
 The package can be installed with few dependencies but to construct weights the package relies on either the [ebal](https://cran.r-project.org/web/packages/ebal/index.html) package (Hainmueller, 2012) or the [sbw](https://cran.r-project.org/web/packages/sbw/index.html) package (Zubizarreta 2015). These two packages have be installed by the users separately. 
 
-`ebal` can be installed from CRAN without dependencies:
+To install these packages from CRAN use: 
 
 ```{r, eval=FALSE}
 remotes::install_cran("ebal")
+remotes::install_cran("sbw")
 ```
-
-The `sbw` package relies on the `spatstat` package. A recent update of the `spatstat` deprecates functions `sbw` has been relying on. To install the `sbw` package, one has to first install an older version of `spatstat` and then the `sbw` package: 
-
-
-```{r, eval=FALSE}
-remotes::install_version("spatstat", "1.64-1", upgrade="never")
-remotes::install_version("sbw", "1.1.1", upgrade="never")
-```
-
 
 ### Usage 
 
@@ -79,7 +71,7 @@ diag_pmm %>% group_by(vname) %>%
 
 ### References 
 
-Moritz Marbach. 2021. Choosing Imputation Models.
+Moritz Marbach. 2021. [Choosing Imputation Models](https://arxiv.org/abs/2107.05427), Political Analysis (forthcoming).
 
 José R Zubizarreta. 2015. [Stable Weights that Balance Covariates for Estimation with Incomplete Outcome Data](https://doi.org/10.1080/01621459.2015.1023805), Journal of the American Statistical Association, 110(511): 910-922.
  

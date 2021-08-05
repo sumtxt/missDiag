@@ -27,20 +27,11 @@ weights the package relies on either the
 (Zubizarreta 2015). These two packages have be installed by the users
 separately.
 
-`ebal` can be installed from CRAN without dependencies:
+To install these packages from CRAN use:
 
 ``` r
 remotes::install_cran("ebal")
-```
-
-The `sbw` package relies on the `spatstat` package. A recent update of
-the `spatstat` deprecates functions `sbw` has been relying on. To
-install the `sbw` package, one has to first install an older version of
-`spatstat` and then the `sbw` package:
-
-``` r
-remotes::install_version("spatstat", "1.64-1", upgrade="never")
-remotes::install_version("sbw", "1.1.1", upgrade="never")
+remotes::install_cran("sbw")
 ```
 
 ### Usage
@@ -59,6 +50,14 @@ package are preferable as their variance is smaller.
 
 ``` r
 library(tidyverse)
+#> ── Attaching packages ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.1 ──
+#> ✔ ggplot2 3.3.5     ✔ purrr   0.3.4
+#> ✔ tibble  3.1.3     ✔ dplyr   1.0.7
+#> ✔ tidyr   1.1.3     ✔ stringr 1.4.0
+#> ✔ readr   2.0.0     ✔ forcats 0.5.1
+#> ── Conflicts ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+#> ✖ dplyr::filter() masks stats::filter()
+#> ✖ dplyr::lag()    masks stats::lag()
 library(missDiag)
 
 diag_rng <- missDiag( 
@@ -83,7 +82,7 @@ average, lower for predictive mean matching.
 ``` r
 diag_rng %>% group_by(vname) %>% 
     summarize( smd=mean(diff_adj) )
-#> # A tibble: 3 x 2
+#> # A tibble: 3 × 2
 #>   vname                 smd
 #>   <chr>               <dbl>
 #> 1 vote_McCain        0.0621
@@ -92,7 +91,7 @@ diag_rng %>% group_by(vname) %>%
 
 diag_pmm %>% group_by(vname) %>% 
     summarize( smd=mean(diff_adj) )
-#> # A tibble: 3 x 2
+#> # A tibble: 3 × 2
 #>   vname                 smd
 #>   <chr>               <dbl>
 #> 1 vote_McCain        0.0562
@@ -102,7 +101,9 @@ diag_pmm %>% group_by(vname) %>%
 
 ### References
 
-Moritz Marbach. 2021. Choosing Imputation Models.
+Moritz Marbach. 2021. [Choosing Imputation
+Models](https://arxiv.org/abs/2107.05427), Political Analysis
+(forthcoming).
 
 José R Zubizarreta. 2015. [Stable Weights that Balance Covariates for
 Estimation with Incomplete Outcome
