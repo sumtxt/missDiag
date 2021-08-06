@@ -43,6 +43,9 @@ ratio of the maximum to mean weight.}
 \item{min.weight.increment}{Increment for iterative trimming of the
 ratio of the minimum to mean weight.}
 }
+\value{
+A \code{list} of parameters that can be passed to \code{\link[=missDiag]{missDiag()}}.
+}
 \description{
 Construct parameter list for ebalance
 }

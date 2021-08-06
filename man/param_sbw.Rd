@@ -27,6 +27,9 @@ param_sbw(
 \item{sol_nam}{solver name. Either "cplex", "gurobi", "mosek",
 "pogs", or "quadprog".}
 }
+\value{
+A \code{list} of parameters that can be passed to \code{\link[=missDiag]{missDiag()}}.
+}
 \description{
 Construct parameter list for sbw
 }

@@ -3,3 +3,4 @@ archive
 ^data-raw$
 ^README.Rmd
 ^README.md
+^CRAN-RELEASE$

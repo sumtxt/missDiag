@@ -27,6 +27,9 @@ should be in absolute value or not.}
 \item{s.d.denom}{character; how the denominator for standardized
 mean differences should be calculated, if requested.}
 }
+\value{
+A \code{list} of parameters that can be passed to \code{\link[=missDiag]{missDiag()}}.
+}
 \description{
 Construct parameter list for cobalt
 }

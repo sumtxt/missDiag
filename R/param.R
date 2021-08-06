@@ -18,6 +18,7 @@
 #' For more information about these parameters, see 
 #' [ebal::ebalance()] and [ebal::ebalance.trim()].
 #' 
+#' @return A \code{list} of parameters that can be passed to [missDiag()].
 #' 
 #' @export
 param_ebal <- function(
@@ -49,6 +50,7 @@ param_ebal <- function(
 #' @details 
 #' For more information about these parameters, see [sbw::sbw()].
 #' 
+#' @return A \code{list} of parameters that can be passed to [missDiag()].
 #' 
 #' @export
 param_sbw <- function(
@@ -79,6 +81,7 @@ param_sbw <- function(
 #' For more information about these parameters, see 
 #'  [cobalt::bal.tab()].
 #' 
+#' @return A \code{list} of parameters that can be passed to [missDiag()].
 #' 
 #' @export
 param_cobalt <- function(
