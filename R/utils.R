@@ -24,14 +24,14 @@ construct_formulas <- function(f, vars){
 
   } else {
 
-    f <- as.Formula(f)
+    f <- as.formula(f)
     K <- length(f)[1]
 
     formulas <- list()
 
     for(i in 1:K){
       
-       nf <- formula(as.Formula(f),lhs=i)
+       nf <- formula(as.formula(f),lhs=i)
        nf <- expand_rhs_dot(nf, all_vars=vars)
        nf <- update.formula(nf, 
           paste(" . ~ . -", all.vars(nf)[1]),
@@ -55,12 +55,12 @@ construct_formulas <- function(f, vars){
 # 
 #   } else {
 # 
-#     f <- as.Formula(f)
+#     f <- as.formula(f)
 #     K <- length(f)[1]
 # 
 #     formulas <- list()
 #     for(i in 1:K){
-#        nf <- formula(as.Formula(f),lhs=i)
+#        nf <- formula(as.formula(f),lhs=i)
 #        nf <- update.formula(nf, 
 #           paste(" . ~ . -", all.vars(nf)[1]),
 #           evaluate=FALSE)
@@ -148,7 +148,7 @@ make_categorical_cov <- function(
     }
   }
 
-  # Explicat the missing values 
+  # Explicate the missing values 
   for(na_var in na_vars){
     if(na_var != yname){
       tmp[[na_var]] <- explicat_na(tmp[[na_var]])
